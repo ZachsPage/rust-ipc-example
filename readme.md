@@ -11,6 +11,8 @@ components + pulls in external dependencies. So, this demo should:
 [My Notes from Rust's docs](./docs/rust_notes.md)
 * [Rust Docs](https://doc.rust-lang.org/book/title-page.html)
 * [Bookmark Placement](https://doc.rust-lang.org/book/ch10-00-generics.html)
+* [Launch proc](https://doc.rust-lang.org/std/process/index.html)
+* [IPC - Local sockets](https://docs.rs/interprocess/latest/interprocess/#modules)
 
 ## Todo's
 ### Milestones

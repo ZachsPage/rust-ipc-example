@@ -16,7 +16,8 @@ Packages - build / test / share crates
 Crates - tree of modules
 * Add via deps - `<dep name> = "<version>"`
 * cargo.locks to same minor vers, update with `cargo update`
-* Link with `extern crate <name>` & `use <crate>::<module>` & `use <name> as <new name>`
+* Link with `use <crate>::<module>` & `use <name> as <new name>`
+  * Was previously  `extern crate <name>`, but prefer "use" now
   * Multi `use` - `use <crate>::{<mod_1>, <mod_2>}` or `use <crate>::*`
 * Can only produce one library, but multiple binaries
   * Compiles each `src/bin/<name>.rs` to their own binary, or specify with 
