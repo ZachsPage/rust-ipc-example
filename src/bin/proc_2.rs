@@ -1,14 +1,9 @@
-use std::io::Result;
-use ipc_comms;
-
-fn run_app() -> Result<i32> {
-    let args = ipc_comms::parse_demo_args()?;
-    let pipe_name : String = args.value_of("pipe-name").expect("Pipe name blank?");
-    println!("proc_2 rcvd pipe name {:?}", pipe_name);
-    Ok(0)
-}
+use ipc_comms::ipc_demo::run_demo_child;
 
 fn main() {
-    let ret_code = ipc_comms::run_and_return_code( run_app );
+    let ret_code = match run_demo_child("proc_2") {
+        Ok(_) => 0,
+        Err(err) => { eprintln!("App Error {:?}", err); 1 }
+    };
     std::process::exit( ret_code )
 }

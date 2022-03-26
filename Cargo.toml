@@ -7,3 +7,4 @@ default-run = "ipc_example"
 
 [dependencies]
 ipc_comms = { path = "./src/ipc_comms/" }
+ipc-channel = "0.15.0"

@@ -4,6 +4,8 @@
 `cargo new <name>`
 `cargo build` (Just to see if compiles without gening a bin - `cargo check`)
   * Much better than compiling with rustc...
+  * Can also add `build` steps with a `build.rs` with a main
+    * Can use `[build-dependencies]` to specify crates only used when building
 Then can do `cargo run`
 
 ## Rust Packaging
@@ -30,6 +32,8 @@ Super - super:: to go up a relative level
 ## Syntax
 let /+ mut - constant - ex. `let x: i32 = 324;` - or infer type
 `let mut s = String::from("hello")` - mutable string instead of constant
+* `String` is `Vec<u8>` stored on the heap, growable, not null term'd
+* `&str` is a slice `&[u8]` - reference view into a `String`
 * If `let s2 = s` makes s invalid (move), unless using .clone() (deep copy)
   * Same with passing strings to functions - unless using ref & (see Ownership)
   * Doesnt apply to i8,16,etc since using stack (`Copy trait`) not heap

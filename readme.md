@@ -13,7 +13,8 @@ components + pulls in external dependencies. So, this demo should:
 * [Rust Docs](https://doc.rust-lang.org/book/title-page.html)
   * [Bookmark Placement](https://doc.rust-lang.org/book/ch10-00-generics.html)
 * [Rust API](https://doc.rust-lang.org/std/index.html)
-* [IPC - Local sockets](https://docs.rs/interprocess/latest/interprocess/#modules)
+* [ipc_channel](https://doc.servo.org/ipc_channel/index.html)
+  * [Github](https://github.com/servo/ipc-channel)
   * Seems like best way for native, platform agnostic Rust IPC comms
 
 ## Todo's
