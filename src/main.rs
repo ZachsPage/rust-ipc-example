@@ -28,6 +28,7 @@ fn run_app() -> Result<i32> {
     let (mut proc_2, serv_2) = create_proc_n_server("proc_2");
 
     println!("Awaiting child process messages...");
+    // Set data to the expected values before receiving to verify content
     let mut expected_data : ChildData = Default::default();
     expected_data.count_tuple = (0, 1, 2);
     expected_data.proc_name = "proc_1".to_string();
